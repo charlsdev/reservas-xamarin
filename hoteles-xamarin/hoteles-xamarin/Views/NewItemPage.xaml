@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="hoteles_xamarin.Views.NewItemPage"
+             Shell.PresentationMode="ModalAnimated"
+             Title="New Item"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="15">
+                <Label Text="Cédula"
+                       FontSize="12"
+                       FontAttributes="Bold"
+                       TextTransform="Uppercase" />
+                <Entry Text="{Binding Cedula, Mode=TwoWay}"
+                       FontSize="12"
+                       MaxLength="10" />
+
+                <Label Text="Nombres Completos"
+                       FontSize="12"
+                       FontAttributes="Bold"
+                       TextTransform="Uppercase" />
+                <Entry Text="{Binding NameCompleto, Mode=TwoWay}"
+                       FontSize="12" />
+
+                <Label Text="Fecha"
+                       FontSize="12"
+                       FontAttributes="Bold"
+                       TextTransform="Uppercase" />
+                <DatePicker MinimumDate="01/01/2022"
+                            Date="{Binding Fecha, Mode=TwoWay}"
+                            FontSize="12" />
+
+                <Label Text="Numero de Personas"
+                       FontSize="12"
+                       FontAttributes="Bold"
+                       TextTransform="Uppercase" />
+                <Entry Text="{Binding NumPersonas, Mode=TwoWay}"
+                       FontSize="12" />
+
+                <Label Text="Tipo de Habitación"
+                       FontSize="12"
+                       FontAttributes="Bold"
+                       TextTransform="Uppercase" />
+                <Picker Title="Seleccionar..."
+                        FontSize="12"
+                        SelectedItem="{Binding TipoHabitacion, Mode=TwoWay}">
+                    <Picker.Items>
+                        <x:String>Personal</x:String>
+                        <x:String>Familiar</x:String>
+                        <x:String>Matrimonial</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Número de Habitación"
+                       FontSize="12"
+                       FontAttributes="Bold"
+                       TextTransform="Uppercase" />
+                <Entry Text="{Binding NumHabitacion, Mode=TwoWay}"
+                       FontSize="12"
+                       MaxLength="3" />
+
+                <Label Text="Lugar del Hotel"
+                       FontSize="12"
+                       FontAttributes="Bold"
+                       TextTransform="Uppercase" />
+                <Picker Title="Seleccionar..."
+                        FontSize="12"
+                        SelectedItem="{Binding Lugar, Mode=TwoWay}">
+                    <Picker.Items>
+                        <x:String>Manta</x:String>
+                        <x:String>Portoviejo</x:String>
+                        <x:String>Guayaquil</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Precio por Día"
+                       FontSize="12"
+                       FontAttributes="Bold"
+                       TextTransform="Uppercase" />
+                <Entry Text="{Binding PrecioDia, Mode=TwoWay}"
+                       FontSize="12"
+                       MaxLength="5" />
+
+                <Label Text="Días de Estadía"
+                       FontSize="12"
+                       FontAttributes="Bold"
+                       TextTransform="Uppercase" />
+                <Entry Text="{Binding DiasEstadia, Mode=TwoWay}"
+                       FontSize="12"
+                       MaxLength="3" />
+
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Cancelar"
+                            Command="{Binding CancelCommand}"
+                            HorizontalOptions="FillAndExpand"></Button>
+                    <Button Text="Guardar"
+                            Command="{Binding SaveCommand}"
+                            HorizontalOptions="FillAndExpand"></Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>

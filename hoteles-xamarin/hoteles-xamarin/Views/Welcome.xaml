@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="hoteles_xamarin.Views.AboutPage"
+             xmlns:vm="clr-namespace:hoteles_xamarin.ViewModels"
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#ff793f</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackLayout BackgroundColor="{StaticResource Accent}"
+                     VerticalOptions="FillAndExpand"
+                     HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center">
+                <ContentView Padding="0,10,0,10"
+                             VerticalOptions="FillAndExpand">
+                    <Image Source="hotel_welcome.png"
+                           VerticalOptions="Center"
+                           HeightRequest="175" />
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Label Text="Hotelería Oro Verde"
+                       FontSize="Title" 
+                       FontAttributes="Bold"
+                       TextColor="#000"
+                       HorizontalTextAlignment="Center"/>
+                <Label TextColor="#333"
+                       Text="Ofrecer experiencias positivas inolvidables para nuestros invitados nacionales e internacionales a través de la excelencia en nuestros servicios de hospedaje y restaurante; logrando valor para nuestros clientes, los colaboradores de nuestra empresa, proveedores, inversionistas y para la sociedad."
+                       FontSize="14"
+                       HorizontalTextAlignment="Center"
+                       Padding="0,0,0,0" />
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
