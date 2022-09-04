@@ -12,11 +12,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\Habitaciones.xaml.cs">
-      <DependentUpon>Habitaciones.xaml</DependentUpon>
+    <Compile Update="Views\UpdateReservaPage.xaml.cs">
+      <DependentUpon>UpdateReservaPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Welcome.xaml.cs">
-      <DependentUpon>Welcome.xaml</DependentUpon>
+    <Compile Update="Views\AllReservaPage.xaml.cs">
+      <DependentUpon>AllReservaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NewReservaPage.xaml.cs">
+      <DependentUpon>NewReservaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\WelcomePage.xaml.cs">
+      <DependentUpon>WelcomePage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

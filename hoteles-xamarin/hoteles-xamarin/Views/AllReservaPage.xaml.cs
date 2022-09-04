@@ -48,7 +48,7 @@ namespace hoteles_xamarin.Views
                 {
                     await DisplayAlert("Información", "Reserva eliminada con éxito.", "OK");
 
-                    BindingContext = _viewModel = new ItemsViewModel();
+                    OnAppearing();
                 }
                 else
                 {

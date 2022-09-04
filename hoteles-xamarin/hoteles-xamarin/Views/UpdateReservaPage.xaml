@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="hoteles_xamarin.Views.ItemDetailPage"
+             Title="Actualizar Reserva">
+
+    <ContentPage.Content>
+        <StackLayout Margin="2,5">
+            <ScrollView>
+                <StackLayout Padding="15">
+                    <Label Text="Cédula"
+                           FontSize="12"
+                           FontAttributes="Bold"
+                           TextTransform="Uppercase" />
+                    <Entry Text="{Binding Cedula}"
+                           FontSize="12"
+                           x:Name="ipt_Cedula"
+                           Keyboard="Numeric"
+                           MaxLength="10" />
+
+                    <Label Text="Nombres Completos"
+                           FontSize="12"
+                           FontAttributes="Bold"
+                           TextTransform="Uppercase" />
+                    <Entry Text="{Binding NameCompleto}"
+                           x:Name="ipt_NomCompleto"
+                           Keyboard="Text"
+                           FontSize="12" />
+
+                    <Label Text="Fecha"
+                           FontSize="12"
+                           FontAttributes="Bold"
+                           TextTransform="Uppercase" />
+                    <DatePicker MinimumDate="01/01/2022"
+                                Date="{Binding Fecha}"
+                                x:Name="ipt_Fecha"
+                                FontSize="12" />
+
+                    <Label Text="Numero de Personas"
+                           FontSize="12"
+                           FontAttributes="Bold"
+                           TextTransform="Uppercase" />
+                    <Entry Text="{Binding NumPersonas}"
+                           x:Name="ipt_NumPersonas"
+                           Keyboard="Numeric"
+                           FontSize="12" />
+
+                    <Label Text="Tipo de Habitación"
+                           FontSize="12"
+                           FontAttributes="Bold"
+                           TextTransform="Uppercase" />
+                    <Picker Title="Seleccionar..."
+                            FontSize="12"
+                            x:Name="ipt_TipHabitacion"
+                            SelectedItem="{Binding TipoHabitacion}">
+                        <Picker.Items>
+                            <x:String>Personal</x:String>
+                            <x:String>Familiar</x:String>
+                            <x:String>Matrimonial</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label Text="Número de Habitación"
+                           FontSize="12"
+                           FontAttributes="Bold"
+                           TextTransform="Uppercase" />
+                    <Entry Text="{Binding NumHabitacion}"
+                           FontSize="12"
+                           x:Name="ipt_NumHabitacion"
+                           Keyboard="Numeric"
+                           MaxLength="3" />
+
+                    <Label Text="Lugar del Hotel"
+                           FontSize="12"
+                           FontAttributes="Bold"
+                           TextTransform="Uppercase" />
+                    <Picker Title="Seleccionar..."
+                            FontSize="12"
+                            x:Name="ipt_Lugar"
+                            SelectedItem="{Binding Lugar}">
+                        <Picker.Items>
+                            <x:String>Manta</x:String>
+                            <x:String>Portoviejo</x:String>
+                            <x:String>Guayaquil</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label Text="Precio por Día"
+                           FontSize="12"
+                           FontAttributes="Bold"
+                           TextTransform="Uppercase" />
+                    <Entry Text="{Binding PrecioDia}"
+                           FontSize="12"
+                           x:Name="ipt_Precio"
+                           Keyboard="Numeric"
+                           MaxLength="5" />
+
+                    <Label Text="Días de Estadía"
+                           FontSize="12"
+                           FontAttributes="Bold"
+                           TextTransform="Uppercase" />
+                    <Entry Text="{Binding DiasEstadia}"
+                           FontSize="12"
+                           x:Name="ipt_Dias"
+                           Keyboard="Numeric"
+                           MaxLength="3" />
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Actualizar"
+                                Command="{Binding UpdateCommand}"
+                                BackgroundColor="#227093"
+                                CornerRadius="10"
+                                FontAttributes="Bold"
+                                Padding="20,0"
+                                HorizontalOptions="CenterAndExpand"
+                                x:Name="btnReserva"
+                                Clicked="btnReserva_Clicked"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

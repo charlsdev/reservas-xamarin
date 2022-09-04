@@ -10,10 +10,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="add.png" Text="Añadir" Command="{Binding AddItemCommand}" />
     </ContentPage.ToolbarItems>
-    <!--
-      x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
-      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
-    -->
+    
     <RefreshView x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
         <CollectionView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
@@ -23,23 +20,25 @@
                     <StackLayout Padding="10"
                                  x:DataType="model:Hotel"
                                  Margin="10,5">
-                        <Label Text="{Binding Cedula}" 
-                               LineBreakMode="NoWrap" 
-                               Style="{DynamicResource ListItemTextStyle}" 
-                               FontSize="16" 
+
+                        <Label Text="{Binding Cedula}"
+                               LineBreakMode="NoWrap"
+                               Style="{DynamicResource ListItemTextStyle}"
+                               FontSize="16"
                                TextColor="#000"
                                FontAttributes="Bold"
-                               HorizontalOptions="End"/>
-                        
+                               HorizontalOptions="End" />
+
                         <Label Text="{Binding NameCompleto}"
                                LineBreakMode="NoWrap"
                                Style="{DynamicResource ListItemTextStyle}"
                                FontSize="14"
                                TextTransform="Uppercase"
                                TextColor="#2c2c54"
+                               Margin="5,0"
                                FontAttributes="Italic,Bold"
                                HorizontalTextAlignment="Start"
-                               VerticalTextAlignment="Center"/>
+                               VerticalTextAlignment="Center" />
 
                         <Grid>
                             <Grid.RowDefinitions>
@@ -257,9 +256,8 @@
                                     Grid.Column="1"
                                     BackgroundColor="#ffb142"
                                     TextColor="#333"
-                                    Margin="50,0"
                                     CornerRadius="6"
-                                    HorizontalOptions="End"
+                                    HorizontalOptions="EndAndExpand"
                                     VerticalOptions="Center"
                                     x:Name="deleteReserva"
                                     CommandParameter="{Binding Id}"

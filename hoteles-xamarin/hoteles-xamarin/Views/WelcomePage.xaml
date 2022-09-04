@@ -3,12 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="hoteles_xamarin.Views.AboutPage"
              xmlns:vm="clr-namespace:hoteles_xamarin.ViewModels"
-             Title="{Binding Title}">
-    
-    <ContentPage.BindingContext>
-        <vm:AboutViewModel />
-    </ContentPage.BindingContext>
-    
+             Title="Bienvenido">
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Accent">#ff793f</Color>

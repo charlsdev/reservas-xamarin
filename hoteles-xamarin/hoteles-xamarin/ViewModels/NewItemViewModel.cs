@@ -33,15 +33,15 @@ namespace hoteles_xamarin.ViewModels
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(cedula)
-                && !String.IsNullOrWhiteSpace(nameCompleto)
+            return !string.IsNullOrWhiteSpace(cedula)
+                && !string.IsNullOrWhiteSpace(nameCompleto)
                 //&& !String.IsNullOrWhiteSpace(fecha)
-                && !String.IsNullOrWhiteSpace(numPersonas)
-                && !String.IsNullOrWhiteSpace(tipoHabitacion)
-                && !String.IsNullOrWhiteSpace(numHabitacion)
-                && !String.IsNullOrWhiteSpace(lugar)
-                && !String.IsNullOrWhiteSpace(precioDia)
-                && !String.IsNullOrWhiteSpace(diasEstadia);
+                && !string.IsNullOrWhiteSpace(numPersonas)
+                && !string.IsNullOrWhiteSpace(tipoHabitacion)
+                && !string.IsNullOrWhiteSpace(numHabitacion)
+                && !string.IsNullOrWhiteSpace(lugar)
+                && !string.IsNullOrWhiteSpace(precioDia)
+                && !string.IsNullOrWhiteSpace(diasEstadia);
         }
 
         public string Cedula

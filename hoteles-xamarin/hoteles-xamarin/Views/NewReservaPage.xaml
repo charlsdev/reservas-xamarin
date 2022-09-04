@@ -16,6 +16,7 @@
                        TextTransform="Uppercase" />
                 <Entry Text="{Binding Cedula, Mode=TwoWay}"
                        FontSize="12"
+                       Keyboard="Numeric"
                        MaxLength="10" />
 
                 <Label Text="Nombres Completos"
@@ -23,6 +24,7 @@
                        FontAttributes="Bold"
                        TextTransform="Uppercase" />
                 <Entry Text="{Binding NameCompleto, Mode=TwoWay}"
+                       Keyboard="Text"
                        FontSize="12" />
 
                 <Label Text="Fecha"
@@ -38,6 +40,7 @@
                        FontAttributes="Bold"
                        TextTransform="Uppercase" />
                 <Entry Text="{Binding NumPersonas, Mode=TwoWay}"
+                       Keyboard="Numeric"
                        FontSize="12" />
 
                 <Label Text="Tipo de Habitación"
@@ -60,6 +63,7 @@
                        TextTransform="Uppercase" />
                 <Entry Text="{Binding NumHabitacion, Mode=TwoWay}"
                        FontSize="12"
+                       Keyboard="Numeric"
                        MaxLength="3" />
 
                 <Label Text="Lugar del Hotel"
@@ -82,6 +86,7 @@
                        TextTransform="Uppercase" />
                 <Entry Text="{Binding PrecioDia, Mode=TwoWay}"
                        FontSize="12"
+                       Keyboard="Numeric"
                        MaxLength="5" />
 
                 <Label Text="Días de Estadía"
@@ -90,14 +95,17 @@
                        TextTransform="Uppercase" />
                 <Entry Text="{Binding DiasEstadia, Mode=TwoWay}"
                        FontSize="12"
+                       Keyboard="Numeric"
                        MaxLength="3" />
 
                 <StackLayout Orientation="Horizontal">
                     <Button Text="Cancelar"
                             Command="{Binding CancelCommand}"
+                            CornerRadius="10"
                             HorizontalOptions="FillAndExpand"></Button>
                     <Button Text="Guardar"
                             Command="{Binding SaveCommand}"
+                            CornerRadius="10"
                             HorizontalOptions="FillAndExpand"></Button>
                 </StackLayout>
             </StackLayout>

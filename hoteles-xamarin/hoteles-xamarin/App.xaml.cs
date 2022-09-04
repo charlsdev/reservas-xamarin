@@ -1,5 +1,4 @@
-﻿using hoteles_xamarin.Services;
-using hoteles_xamarin.Views;
+﻿using hoteles_xamarin.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,7 +12,6 @@ namespace hoteles_xamarin
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 

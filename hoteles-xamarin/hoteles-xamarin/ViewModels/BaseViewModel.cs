@@ -1,5 +1,4 @@
 ﻿using hoteles_xamarin.Models;
-using hoteles_xamarin.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,8 +9,6 @@ namespace hoteles_xamarin.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Hotel> DataStore => DependencyService.Get<IDataStore<Hotel>>();
-
         bool isBusy = false;
         public bool IsBusy
         {
