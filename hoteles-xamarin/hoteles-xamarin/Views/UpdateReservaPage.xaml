@@ -113,8 +113,7 @@
                                 FontAttributes="Bold"
                                 Padding="20,0"
                                 HorizontalOptions="CenterAndExpand"
-                                x:Name="btnReserva"
-                                Clicked="btnReserva_Clicked"></Button>
+                                x:Name="btnReserva"></Button>
                     </StackLayout>
                 </StackLayout>
             </ScrollView>

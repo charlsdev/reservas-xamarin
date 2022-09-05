@@ -23,13 +23,13 @@ namespace hoteles_xamarin.Views
             /*if (viewModel != null)
             {
                 if (
-                    !string.IsNullOrWhiteSpace(viewModel.Cedula) && 
-                    !string.IsNullOrWhiteSpace(viewModel.NameCompleto) && 
-                    !string.IsNullOrWhiteSpace(viewModel.NumPersonas) && 
-                    !string.IsNullOrWhiteSpace(viewModel.TipoHabitacion) && 
-                    !string.IsNullOrWhiteSpace(viewModel.NumHabitacion) && 
-                    !string.IsNullOrWhiteSpace(viewModel.Lugar) && 
-                    !string.IsNullOrWhiteSpace(viewModel.PrecioDia) && 
+                    !string.IsNullOrWhiteSpace(viewModel.Cedula) &&
+                    !string.IsNullOrWhiteSpace(viewModel.NameCompleto) &&
+                    !string.IsNullOrWhiteSpace(viewModel.NumPersonas) &&
+                    !string.IsNullOrWhiteSpace(viewModel.TipoHabitacion) &&
+                    !string.IsNullOrWhiteSpace(viewModel.NumHabitacion) &&
+                    !string.IsNullOrWhiteSpace(viewModel.Lugar) &&
+                    !string.IsNullOrWhiteSpace(viewModel.PrecioDia) &&
                     !string.IsNullOrWhiteSpace(viewModel.DiasEstadia)
                 )
                 {
